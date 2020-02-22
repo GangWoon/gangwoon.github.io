@@ -16,7 +16,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: cLoud
-  tagline: We will find the way.   We always have.
+  tagline: Hello Swift!?
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
