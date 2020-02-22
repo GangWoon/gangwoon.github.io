@@ -16,7 +16,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: cLoud
-  tagline: iOS Investigator
+  tagline: We will find the way.   We always have.
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
