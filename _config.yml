@@ -21,7 +21,7 @@ texture:
   style: black
   showNav: false
   showPicker: false
-  disqus_shortname: games
+  disqus_shortname: iOS
   # generate social links in footer
   social_links:
     github:  gangwoon
