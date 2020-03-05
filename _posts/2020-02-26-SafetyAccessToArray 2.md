@@ -6,7 +6,11 @@ categories: Array
 
 ---
 
-Dictionary는 '키' 값이 유효하지 않을 경우에 nil을 반환하지만, Array의 경우에는 **Out of bounds**와 함께 app crash가 발생한다.
+Dictionary는 '키' 값이 유효하지 않을 경우에 nil을 반환하지만, 
+
+<br>
+
+Array의 경우에는 **Out of bounds**와 함께 app crash가 발생한다.
 
 array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.
 
