@@ -6,7 +6,7 @@
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-06</pubDate>
-    <lastBuildDate>Fri, 06 Mar 2020 14:37:25 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 14:39:52 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -16,6 +16,8 @@
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/48466830/75874959-2342cc00-5e56-11ea-9045-26f550225e9f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;글에 들어가기 앞서 mvc 이론적인 부분이 아닌, 실제로 프로젝트에 적용할 때 필요한 정보에 대해서 정리했다.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;model&quot;&gt;Model&lt;/h2&gt;
 
@@ -95,7 +97,7 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;mvc 패턴에서 가장 중요한 역할을 하는 viewController. &lt;br /&gt; __view와 model의 존재를 알고 있는 존재__로서, event가 발생하면 model과 view를 묶어주는 역할을 담당한다.&lt;/p&gt;
+&lt;p&gt;mvc 패턴에서 가장 중요한 역할을 하는 viewController. &lt;br /&gt; &lt;strong&gt;view와 model의 존재를 알고 있는 존재&lt;/strong&gt; 로서, event가 발생하면 model과 view를 묶어주는 역할을 담당한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;viewcontroller---model&quot;&gt;ViewController -&amp;gt; Model&lt;/h3&gt;
 
