@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="글에 들어가기 앞서 mvc 이론적인 부분이 아닌, 실제로 프로젝트에 적용할 때 필요한 정보에 대해서 정리했다.">
+  <meta name="keywords" content="iOS">
+  <meta name="author" content="MVC | Leonids">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MVC | Leonids">
+  <meta name="twitter:description" content="글에 들어가기 앞서 mvc 이론적인 부분이 아닌, 실제로 프로젝트에 적용할 때 필요한 정보에 대해서 정리했다.">
+  
+    <meta property="twitter:image" content="http://localhost:4000/img/leonids-logo.png">
+  
+
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="http://localhost:4000/articles/2020-02/MVC">
+  <meta property="og:title" content="MVC | Leonids">
+  <meta property="og:description" content="글에 들어가기 앞서 mvc 이론적인 부분이 아닌, 실제로 프로젝트에 적용할 때 필요한 정보에 대해서 정리했다.">
+  
+    <meta property="og:image" content="http://localhost:4000/img/leonids-logo.png">
+  
+  <title>MVC | Leonids</title>
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+
+  <link rel="canonical" href="http://localhost:4000/articles/2020-02/MVC">
+  <link rel="alternate" type="application/rss+xml" title="Leonids" href="http://localhost:4000/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <a href="http://localhost:4000/">
+    <img src="http://localhost:4000/img/leonids-logo.png" alt="" class="avatar">
+  </a>
+  
+  <a href="http://localhost:4000/" class="author_name">gangwoon</a>
+  <span class="author_job">iOS Investigator</span>
+  <span class="author_bio mbm">Code Squid Master</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="http://localhost:4000/">home</a>
+      </li>
+       
+      <li class="nav-item">
+        <a href="http://localhost:4000/archive/">Archive</a>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://localhost:4000/categories/">Categories</a>
+      </li>
+             
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('gangwoon2018@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="http://github.com/GangWoon" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "http://localhost:4000/" >
+  Home
+</a>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="MVC">MVC</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        23 FEB 2020
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/48466830/75874959-2342cc00-5e56-11ea-9045-26f550225e9f.png" alt="image" /></p>
+
+<p>글에 들어가기 앞서 mvc 이론적인 부분이 아닌, 실제로 프로젝트에 적용할 때 필요한 정보에 대해서 정리했다.</p>
+
+<!--more-->
+
+<h2 id="model">Model</h2>
+
+<hr />
+
+<h3 id="model---viewcontroller">Model -&gt; ViewController</h3>
+
+<p>model에서 viewcontroller로 정보를 보내는 건 model이 viewcontroller를 알고 있는 것처럼 느껴지지만, 사실 아래에 있는 두 가지 선택 중 어느 걸 선택하더라도 viewController가 model을 감시하는 구조이다. <strong>model은 viewController을 몰라야 한다.</strong></p>
+
+<ul>
+  <li>
+    <p>KVO
+observer에게 감시받는 속성을 갱신한다.</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">extension</span> <span class="kt">Model</span><span class="p">:</span> <span class="kt">ViewDataSoure</span><span class="p">,</span> <span class="kt">Datable</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">someMethod</span><span class="p">(</span><span class="nv">newData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">information</span> <span class="o">=</span> <span class="n">newData</span>
+    <span class="p">}</span>
+  	<span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Notification
+notification center로 정보를 전송한다.</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">post</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span><span class="p">(</span><span class="s">"model"</span><span class="p">),</span>
+                                <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+                                <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="s">"information"</span><span class="p">:</span> <span class="n">game</span><span class="p">])</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>모델 객체는 뷰 객체나 뷰 프레임워크에 의존하지 않고 독립적으로 만들어야 한다.			- JK</p>
+</blockquote>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<h2 id="view">View</h2>
+
+<hr />
+
+<h3 id="view---viewcontroller">View -&gt; ViewController</h3>
+
+<p>view에서 event가 발생한 걸 viewController로 보내기 위해 delegate 패턴을 사용한다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">datasource</span><span class="p">:</span> <span class="kt">ViewDataSource</span><span class="p">?</span>
+<span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Datable</span><span class="p">?</span>
+
+<span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">didTouchedButton</span><span class="p">()</span> <span class="p">{</span>
+  	<span class="n">datasource</span><span class="o">.</span><span class="nf">someMethod</span><span class="p">(</span><span class="nv">newData</span><span class="p">:</span> <span class="n">someData</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>view객체에서 신경 써야 할 부분은 model객체를 모르는 것이다.  <strong>datasource라는 속성을 구현해주는 대상을 몰라야 한다.</strong></p>
+
+<p>하지만 정보를 받아올 때 “model을 사용할 수밖에 없는 게 아닌가.” 의문점이 드는데 이 부분을 프로토콜의 다형성을 사용한다.</p>
+
+<p>model이 특정 프로토콜을 채택하게 만들어서 view에서는 그 특정 프로토콜을 받도록 만든다.</p>
+
+<blockquote>
+  <p>다른 객체를 참조하는 경우에는 구체 타입에 의존하지 않고, 프로토콜에 의존하도록 만든다.			-JK</p>
+</blockquote>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<h2 id="viewcontroller">ViewController</h2>
+
+<hr />
+
+<p>mvc 패턴에서 가장 중요한 역할을 하는 viewController,  __view와 model의 존재를 알고 있는 존재__로서, event가 발생하면 model과 view를 묶어주는 역할을 담당한다.</p>
+
+<h3 id="viewcontroller---model">ViewController -&gt; Model</h3>
+
+<p>view에서 받은 자료를 model로 전달한다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">...</span>
+		<span class="n">view</span><span class="o">.</span><span class="n">datasource</span> <span class="o">=</span> <span class="n">model</span>  
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="viewcontroller---view">ViewController -&gt; View</h3>
+
+<p>model에서 받은 정보를 view에게 넘겨준다.</p>
+
+<ul>
+  <li>
+    <p>KVO</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">observer</span> <span class="o">=</span> <span class="n">dataManager</span><span class="o">.</span><span class="nf">observe</span><span class="p">(\</span><span class="o">.</span><span class="n">model</span><span class="p">)</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">model</span> <span class="k">in</span>
+    <span class="n">view</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">newValue</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Notification</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">,</span>
+                                        <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">pushInformationToView</span><span class="kd">)</span><span class="p">,</span>
+                                        <span class="nv">name</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span><span class="p">(</span> <span class="s">"model"</span><span class="p">),</span>
+                                        <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+  
+<span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">pushInformationToView</span><span class="p">(</span><span class="n">_</span> <span class="nv">notificaiton</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">....</span> <span class="n">notifiaction</span><span class="o">.</span><span class="n">userInfo</span> <span class="n">사용</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p>mvc 패턴의 작동을 시간 순으로 나태는 그림이다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/48466830/76004112-56678700-5f4c-11ea-8bd1-9e47875df435.png" alt="Paper 다이어리 90" /></p>
+
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2020-02/MVC" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2020-02/MVC" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2020-02/MVC" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/articles/2020-02/MVC" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://localhost:4000/articles/2020-02/MVC" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+        <footer>
+  &copy; 2020 gangwoon. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://localhost:4000/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://localhost:4000/js/main.js"></script>
+
+
+</body>
+</html>
