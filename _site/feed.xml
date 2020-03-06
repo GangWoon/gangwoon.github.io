@@ -6,7 +6,7 @@
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-06</pubDate>
-    <lastBuildDate>Fri, 06 Mar 2020 14:46:17 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 14:49:21 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -95,7 +95,7 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;viewcontroller&quot;&gt;ViewController&lt;/h2&gt;
 
-&lt;p&gt;mvc 패턴에서 가장 중요한 역할을 하는 viewController. &lt;br /&gt; __view와 model의 존재를 알고 있는 존재__로서, event가 발생하면 model과 view를 묶어주는 역할을 담당한다.&lt;/p&gt;
+&lt;p&gt;mvc 패턴에서 가장 중요한 역할을 하는 viewController. &lt;br /&gt; &lt;strong&gt;view와 model의 존재를 알고 있는 존재&lt;/strong&gt;로서, event가 발생하면 model과 view를 묶어주는 역할을 담당한다.&lt;/p&gt;
 
 &lt;h3 id=&quot;viewcontroller---model&quot;&gt;ViewController -&amp;gt; Model&lt;/h3&gt;
 
