@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.">
+  <meta name="description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.extension Array {    subscript(...">
   <meta name="keywords" content="iOS">
   <meta name="author" content="Out of bounds | Leonids">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
   <!-- Twitter Tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Out of bounds | Leonids">
-  <meta name="twitter:description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.">
+  <meta name="twitter:description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.extension Array {    subscript(...">
   
     <meta property="twitter:image" content="http://localhost:4000/img/leonids-logo.png">
   
@@ -26,7 +26,7 @@
   <meta property="og:type" content="blog">
   <meta property="og:url" content="http://localhost:4000/articles/2020-02/SafetyAccessToArray-2">
   <meta property="og:title" content="Out of bounds | Leonids">
-  <meta property="og:description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.">
+  <meta property="og:description" content="Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,Array의 경우에는 Out of bounds와 함께 app crash가 발생한다.array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.extension Array {    subscript(...">
   
     <meta property="og:image" content="http://localhost:4000/img/leonids-logo.png">
   
@@ -75,7 +75,15 @@
       <li class="nav-item">
         <a href="http://localhost:4000/categories/">Categories</a>
       </li>
-             
+            
+      <li class="nav-item">
+        <a href="http://localhost:4000/resume/">Resume</a>
+      </li>
+        
+      <li class="nav-item">
+        <a href="http://localhost:4000/tags/">Tags</a>
+      </li>
+         
     </ul>
   </nav>
   <script type="text/javascript">
@@ -158,9 +166,9 @@
   <article class="post-content">
     <p>Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,</p>
 
-<p>Array의 경우에는 <strong>Out of bounds</strong>와 함께 app crash가 발생한다.</p>
+<p><br /></p>
 
-<!--more-->
+<p>Array의 경우에는 <strong>Out of bounds</strong>와 함께 app crash가 발생한다.</p>
 
 <p>array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.</p>
 
