@@ -6,7 +6,7 @@
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <pubDate>2020-03-06</pubDate>
-    <lastBuildDate>Fri, 06 Mar 2020 14:12:11 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 14:36:03 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -19,11 +19,13 @@
 
 &lt;h2 id=&quot;model&quot;&gt;Model&lt;/h2&gt;
 
-&lt;hr /&gt;
-
 &lt;h3 id=&quot;model---viewcontroller&quot;&gt;Model -&amp;gt; ViewController&lt;/h3&gt;
 
-&lt;p&gt;model에서 viewcontroller로 정보를 보내는 건 model이 viewcontroller를 알고 있는 것처럼 느껴지지만, 사실 아래에 있는 두 가지 선택 중 어느 걸 선택하더라도 viewController가 model을 감시하는 구조이다. &lt;strong&gt;model은 viewController을 몰라야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;model에서 viewcontroller로 정보를 보내는 건 model이 viewcontroller를 알고 있는 것처럼 느껴진다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;사실 아래에 있는 두 가지 선택 중 어느 걸 선택하더라도 viewController가 model을 감시하는 구조이다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;model은 viewController을 몰라야 한다.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -75,9 +77,9 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;view객체에서 신경 써야 할 부분은 model객체를 모르는 것이다.  &lt;strong&gt;datasource라는 속성을 구현해주는 대상을 몰라야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;view객체에서 신경 써야 할 부분은 model객체를 모르는 것이다.  &lt;strong&gt;datasource라는 속성을 구현해주는 대상을 몰라야 한다.&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;하지만 정보를 받아올 때 “model을 사용할 수밖에 없는 게 아닌가.” 의문점이 드는데 이 부분을 프로토콜의 다형성을 사용한다.&lt;/p&gt;
+&lt;p&gt;정보를 받아올 때 “model을 사용할 수밖에 없는 게 아닌가?” 의문점이 드는데 이 부분을 프로토콜의 다형성을 사용한다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;model이 특정 프로토콜을 채택하게 만들어서 view에서는 그 특정 프로토콜을 받도록 만든다.&lt;/p&gt;
 
@@ -158,9 +160,9 @@ notification center로 정보를 전송한다.&lt;/p&gt;
         <title>Out of bounds</title>
         <description>&lt;p&gt;Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;Array의 경우에는 &lt;strong&gt;Out of bounds&lt;/strong&gt;와 함께 app crash가 발생한다.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.&lt;/p&gt;
 
@@ -199,8 +201,8 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 
 </description>
         <pubDate>2020-03-06</pubDate>
-        <link>http://localhost:4000/articles/2020-02/SafetyAccessToArray-2</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2020-02/SafetyAccessToArray-2</guid>
+        <link>http://localhost:4000/articles/2020-02/SafetyAccessToArray</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-02/SafetyAccessToArray</guid>
         
         
         <category>Array</category>

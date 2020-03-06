@@ -165,11 +165,13 @@
 
 <h2 id="model">Model</h2>
 
-<hr />
-
 <h3 id="model---viewcontroller">Model -&gt; ViewController</h3>
 
-<p>model에서 viewcontroller로 정보를 보내는 건 model이 viewcontroller를 알고 있는 것처럼 느껴지지만, 사실 아래에 있는 두 가지 선택 중 어느 걸 선택하더라도 viewController가 model을 감시하는 구조이다. <strong>model은 viewController을 몰라야 한다.</strong></p>
+<p>model에서 viewcontroller로 정보를 보내는 건 model이 viewcontroller를 알고 있는 것처럼 느껴진다. <br /></p>
+
+<p>사실 아래에 있는 두 가지 선택 중 어느 걸 선택하더라도 viewController가 model을 감시하는 구조이다. <br /></p>
+
+<p><strong>model은 viewController을 몰라야 한다.</strong></p>
 
 <ul>
   <li>
@@ -221,9 +223,9 @@ notification center로 정보를 전송한다.</p>
 
 <p><br /></p>
 
-<p>view객체에서 신경 써야 할 부분은 model객체를 모르는 것이다.  <strong>datasource라는 속성을 구현해주는 대상을 몰라야 한다.</strong></p>
+<p>view객체에서 신경 써야 할 부분은 model객체를 모르는 것이다.  <strong>datasource라는 속성을 구현해주는 대상을 몰라야 한다.</strong> <br /></p>
 
-<p>하지만 정보를 받아올 때 “model을 사용할 수밖에 없는 게 아닌가.” 의문점이 드는데 이 부분을 프로토콜의 다형성을 사용한다.</p>
+<p>정보를 받아올 때 “model을 사용할 수밖에 없는 게 아닌가?” 의문점이 드는데 이 부분을 프로토콜의 다형성을 사용한다. <br /></p>
 
 <p>model이 특정 프로토콜을 채택하게 만들어서 view에서는 그 특정 프로토콜을 받도록 만든다.</p>
 
@@ -314,7 +316,7 @@ notification center로 정보를 전송한다.</p>
       
     </p>
     <h4>
-      <a href="http://localhost:4000/articles/2020-02/SafetyAccessToArray-2" class="post-title" title="Out of bounds">Out of bounds</a>
+      <a href="http://localhost:4000/articles/2020-02/SafetyAccessToArray" class="post-title" title="Out of bounds">Out of bounds</a>
       
     </h4>
 
@@ -327,44 +329,7 @@ notification center로 정보를 전송한다.</p>
       <p>
         <p>Dictionary는 ‘키’ 값이 유효하지 않을 경우에 nil을 반환하지만,</p>
 
-<p><br /></p>
-
 <p>Array의 경우에는 <strong>Out of bounds</strong>와 함께 app crash가 발생한다.</p>
-
-<p>array를 안전하게 사용하기 위해서 아래 코드처럼 사용할 수 있다.</p>
-
-<p><br /></p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">extension</span> <span class="kt">Array</span> <span class="p">{</span>
-    <span class="nf">subscript</span><span class="p">(</span><span class="n">safe</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">indices</span> <span class="o">~=</span> <span class="n">index</span> <span class="p">?</span> <span class="k">self</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="p">:</span> <span class="kc">nil</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><br /><br /></p>
-
-<h3 id="-연산자">~= 연산자</h3>
-
-<p>패턴을 비교하는 연산자이다.</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">~=</span> <span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;.</span><span class="kt">Index</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
-</code></pre></div></div>
-
-<p>~= 을 사용하지 않았다면 아래 코드와 같이 표현해야되지만 ~=을 사용해서 깔끔하게 표현했다.</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">endIndex</span> <span class="p">{</span> <span class="p">}</span>
-</code></pre></div></div>
-
-<p><br /></p>
-
-<p><br /></p>
-
-<p>Reference</p>
-
-<hr />
-
-<p><a href="http://minsone.github.io/programming/check-index-of-array-in-swift">민소네</a></p>
 
 
       </p>
@@ -415,8 +380,9 @@ notification center로 정보를 전송한다.</p>
 
 
         <footer>
-  &copy; 2020 gangwoon. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+We will find the way. We always have
 </footer>
+
 
       </div>
     </div>
