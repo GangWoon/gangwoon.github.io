@@ -5,8 +5,8 @@
     <description>cLoud</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-03-06</pubDate>
-    <lastBuildDate>Fri, 06 Mar 2020 15:04:19 +0100</lastBuildDate>
+    <pubDate>2020-03-07</pubDate>
+    <lastBuildDate>Sat, 07 Mar 2020 15:35:02 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -151,7 +151,7 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/48466830/76004112-56678700-5f4c-11ea-8bd1-9e47875df435.png&quot; alt=&quot;Paper 다이어리 90&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-06</pubDate>
+        <pubDate>2020-03-07</pubDate>
         <link>http://localhost:4000/articles/2020-02/MVC</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/MVC</guid>
         
@@ -204,7 +204,7 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://minsone.github.io/programming/check-index-of-array-in-swift&quot;&gt;민소네&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>2020-03-06</pubDate>
+        <pubDate>2020-03-07</pubDate>
         <link>http://localhost:4000/articles/2020-02/SafetyAccessToArray</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/SafetyAccessToArray</guid>
         
@@ -219,7 +219,7 @@ notification center로 정보를 전송한다.&lt;/p&gt;
 
 &lt;p&gt;We always have.&lt;/p&gt;
 </description>
-        <pubDate>2020-03-06</pubDate>
+        <pubDate>2020-03-07</pubDate>
         <link>http://localhost:4000/articles/2020-02/Init</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/Init</guid>
         
