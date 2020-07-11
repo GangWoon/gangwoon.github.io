@@ -34,7 +34,7 @@ extension Array {
 static func ~= (pattern: Range<Array<Element>.Index>, value: Int) -> Bool
 ```
 
-~= 을 사용하지 않았다면 아래 코드와 같이 표현해야되지만 ~=을 사용해서 깔끔하게 표현했다.
+~= 을 사용하지 않았다면 아래 코드와 같이 표현해야되지만, ~=을 사용하면 깔끔하게 표현할 수 있다.
 
 ```swift
 if index >= 0 && index < endIndex { }
